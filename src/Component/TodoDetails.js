@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoDetails = ({ todo, isEditing, onEditHandler, deleteTodo, onCompleteHandler}) => {
+const TodoDetails = ({ todo, isEditing, onEditHandler, onDeleteTodo, onCompleteHandler}) => {
 //   console.log(todo.text);
 
   return (
@@ -26,8 +26,8 @@ const TodoDetails = ({ todo, isEditing, onEditHandler, deleteTodo, onCompleteHan
             Edit
           </button>
           <button
-            className="w-[5em] h-[2em] bg-[red] rounded ml-[2em] text-white"
-            onClick={() => deleteTodo(todo.id)}
+            className="w-[5em]  h-[2em] bg-[red] rounded ml-[2em] text-white"
+            onClick={() => onDeleteTodo(todo.id)}
           >
             Delete
           </button>
